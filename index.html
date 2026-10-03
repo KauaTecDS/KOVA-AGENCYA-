@@ -1,0 +1,2901 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KOVA AGENCYA — Sites & Presença Digital</title>
+
+<meta name="description" content="KOVA AGENCYA — criação de sites profissionais e presença digital.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#070707;
+    color:#fff;
+    font-family:Inter,Arial,sans-serif;
+    overflow-x:hidden;
+}
+
+body.no-scroll{
+    overflow:hidden;
+}
+
+a{
+    color:inherit;
+    text-decoration:none;
+}
+
+button,
+input,
+textarea,
+select{
+    font:inherit;
+}
+
+/* =========================
+   VARIABLES
+========================= */
+
+:root{
+    --bg:#070707;
+    --bg2:#0c0c0c;
+    --card:#111;
+    --line:rgba(255,255,255,.10);
+    --text:#f5f5f5;
+    --muted:rgba(255,255,255,.58);
+    --max:1180px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header{
+    position:fixed;
+    z-index:100;
+    top:15px;
+    left:50%;
+    transform:translateX(-50%);
+    width:min(1150px,calc(100% - 25px));
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:13px 15px 13px 20px;
+
+    border:1px solid var(--line);
+    border-radius:18px;
+
+    background:rgba(8,8,8,.86);
+    backdrop-filter:blur(15px);
+}
+
+.logo{
+    font-family:Manrope;
+    font-size:23px;
+    font-weight:800;
+    letter-spacing:-.07em;
+}
+
+.nav{
+    display:flex;
+    gap:25px;
+}
+
+.nav a{
+    font-size:11px;
+    font-weight:700;
+    color:var(--muted);
+    transition:.25s;
+}
+
+.nav a:hover{
+    color:#fff;
+}
+
+.header-btn{
+    padding:10px 15px;
+    border-radius:999px;
+    background:#fff;
+    color:#000;
+    font-size:11px;
+    font-weight:800;
+}
+
+.menu{
+    display:none;
+    border:0;
+    background:none;
+    color:#fff;
+    font-size:22px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:100vh;
+    width:min(var(--max),calc(100% - 40px));
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:60px;
+
+    padding:140px 0 90px;
+
+    position:relative;
+}
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:550px;
+    height:550px;
+    left:-250px;
+    top:100px;
+
+    background:radial-gradient(
+        circle,
+        rgba(255,255,255,.09),
+        transparent 68%
+    );
+
+    pointer-events:none;
+}
+
+.eyebrow{
+    display:flex;
+    align-items:center;
+    gap:9px;
+
+    margin-bottom:24px;
+
+    color:var(--muted);
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:.16em;
+}
+
+.dot{
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:#fff;
+    box-shadow:0 0 15px #fff;
+}
+
+.hero h1{
+    max-width:720px;
+
+    font-family:Manrope;
+    font-size:clamp(45px,6vw,78px);
+    line-height:.96;
+    letter-spacing:-.06em;
+}
+
+.hero h1 span{
+    color:rgba(255,255,255,.38);
+}
+
+.hero-text{
+    max-width:590px;
+    margin:28px 0;
+
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.8;
+}
+
+.buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:9px;
+
+    padding:14px 19px;
+
+    border-radius:999px;
+    border:1px solid var(--line);
+
+    font-size:11px;
+    font-weight:800;
+
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.btn-white{
+    background:#fff;
+    color:#000;
+}
+
+.btn-dark{
+    background:transparent;
+}
+
+.hero-proof{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    margin-top:32px;
+
+    color:var(--muted);
+    font-size:9px;
+}
+
+.hero-proof::before{
+    content:"";
+    width:45px;
+    height:1px;
+    background:#fff;
+}
+
+/* =========================
+   HERO VISUAL
+========================= */
+
+.visual{
+    border:1px solid var(--line);
+    border-radius:27px;
+    padding:10px;
+
+    background:linear-gradient(
+        145deg,
+        #171717,
+        #080808
+    );
+
+    box-shadow:0 30px 90px rgba(0,0,0,.45);
+}
+
+.visual-top{
+    height:38px;
+
+    display:flex;
+    align-items:center;
+    gap:6px;
+
+    padding:0 10px;
+
+    color:var(--muted);
+    font-size:8px;
+    letter-spacing:.12em;
+}
+
+.window{
+    width:7px;
+    height:7px;
+    border-radius:50%;
+    background:rgba(255,255,255,.25);
+}
+
+.visual-screen{
+    min-height:500px;
+
+    position:relative;
+    overflow:hidden;
+
+    border-radius:19px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #262626,
+            #090909 70%
+        );
+}
+
+.visual-logo{
+    font-family:Manrope;
+    font-size:75px;
+    font-weight:800;
+    letter-spacing:-.09em;
+}
+
+.floating-card{
+    position:absolute;
+
+    padding:14px 16px;
+
+    border:1px solid var(--line);
+    border-radius:14px;
+
+    background:rgba(255,255,255,.045);
+
+    box-shadow:0 20px 50px rgba(0,0,0,.3);
+}
+
+.floating-card small{
+    display:block;
+    color:var(--muted);
+    font-size:8px;
+}
+
+.floating-card strong{
+    display:block;
+    margin:3px 0;
+    font-size:14px;
+}
+
+.floating-card span{
+    color:var(--muted);
+    font-size:9px;
+}
+
+.card-a{
+    top:15%;
+    left:7%;
+}
+
+.card-b{
+    right:7%;
+    bottom:14%;
+}
+
+.scan{
+    position:absolute;
+    left:0;
+    right:0;
+    top:50%;
+
+    height:1px;
+
+    background:rgba(255,255,255,.17);
+}
+
+/* =========================
+   MARQUEE
+========================= */
+
+.marquee{
+    overflow:hidden;
+    white-space:nowrap;
+
+    border-block:1px solid var(--line);
+
+    padding:17px 0;
+}
+
+.marquee-track{
+    display:inline-block;
+
+    color:rgba(255,255,255,.40);
+
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:.16em;
+
+    animation:marquee 22s linear infinite;
+}
+
+@keyframes marquee{
+    to{
+        transform:translateX(-50%);
+    }
+}
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.section{
+    width:min(var(--max),calc(100% - 40px));
+    margin:auto;
+    padding:125px 0;
+}
+
+.kicker{
+    color:var(--muted);
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:.16em;
+}
+
+.heading{
+    max-width:800px;
+}
+
+.heading h2{
+    margin-top:13px;
+
+    font-family:Manrope;
+    font-size:clamp(35px,5vw,62px);
+    line-height:1;
+    letter-spacing:-.055em;
+}
+
+.heading h2 span{
+    color:rgba(255,255,255,.38);
+}
+
+.heading p{
+    max-width:650px;
+    margin-top:18px;
+
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.75;
+}
+
+/* =========================
+   SERVICE
+========================= */
+
+.service-grid{
+    display:grid;
+    grid-template-columns:.85fr 1.15fr;
+    gap:80px;
+
+    margin-top:70px;
+}
+
+.service-big{
+    font-family:Manrope;
+    font-size:27px;
+    line-height:1.35;
+    letter-spacing:-.035em;
+}
+
+.text-link{
+    display:inline-block;
+
+    margin-top:28px;
+    padding-bottom:7px;
+
+    border-bottom:1px solid rgba(255,255,255,.35);
+
+    font-size:10px;
+    font-weight:800;
+}
+
+.features{
+    border-top:1px solid var(--line);
+}
+
+.feature{
+    display:grid;
+    grid-template-columns:45px 1fr;
+    gap:20px;
+
+    padding:24px 0;
+
+    border-bottom:1px solid var(--line);
+}
+
+.feature-number{
+    color:var(--muted);
+    font-size:10px;
+}
+
+.feature h3{
+    font-family:Manrope;
+    font-size:18px;
+}
+
+.feature p{
+    margin-top:7px;
+
+    color:var(--muted);
+    font-size:11px;
+    line-height:1.6;
+}
+
+/* =========================
+   PACKAGE
+========================= */
+
+.package-card{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    margin-top:50px;
+
+    overflow:hidden;
+
+    border:1px solid var(--line);
+    border-radius:25px;
+
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.05),
+        rgba(255,255,255,.015)
+    );
+}
+
+.package-main,
+.package-list{
+    padding:40px;
+}
+
+.package-main{
+    border-right:1px solid var(--line);
+}
+
+.package-label{
+    color:var(--muted);
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:.15em;
+}
+
+.package-main h3{
+    margin:15px 0;
+
+    font-family:Manrope;
+    font-size:34px;
+    line-height:1.05;
+    letter-spacing:-.045em;
+}
+
+.package-main p{
+    color:var(--muted);
+    font-size:12px;
+    line-height:1.7;
+}
+
+.price{
+    display:flex;
+    align-items:end;
+    gap:10px;
+
+    margin:28px 0;
+}
+
+.price strong{
+    font-family:Manrope;
+    font-size:48px;
+}
+
+.price small{
+    color:var(--muted);
+    font-size:9px;
+}
+
+.full{
+    width:100%;
+}
+
+.included-title{
+    margin-bottom:15px;
+
+    color:var(--muted);
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:.12em;
+}
+
+.included{
+    padding:12px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.07);
+
+    font-size:11px;
+}
+
+.included span{
+    margin-right:8px;
+    color:rgba(255,255,255,.6);
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:24px;
+
+    margin-top:55px;
+}
+
+.project{
+    overflow:hidden;
+
+    border:1px solid var(--line);
+    border-radius:24px;
+
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.05),
+        rgba(255,255,255,.015)
+    );
+}
+
+.project-top{
+    display:flex;
+    justify-content:space-between;
+
+    padding:18px 20px;
+
+    color:var(--muted);
+
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:.12em;
+}
+
+.project-top div{
+    display:flex;
+    gap:12px;
+}
+
+.project-status{
+    color:#fff;
+}
+
+.project-preview{
+    height:460px;
+    margin:0 9px;
+
+    position:relative;
+    overflow:hidden;
+
+    border:1px solid var(--line);
+    border-radius:17px;
+
+    background:#111;
+}
+
+.browser{
+    position:absolute;
+    z-index:5;
+
+    top:0;
+    left:0;
+    right:0;
+
+    height:35px;
+
+    display:flex;
+    align-items:center;
+    gap:6px;
+
+    padding:0 12px;
+
+    background:#111;
+
+    border-bottom:1px solid var(--line);
+}
+
+.browser-dot{
+    width:7px;
+    height:7px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.28);
+}
+
+.browser-url{
+    margin-left:8px;
+
+    color:var(--muted);
+
+    font-size:8px;
+}
+
+.project iframe{
+    position:absolute;
+
+    top:35px;
+    left:0;
+
+    width:100%;
+    height:calc(100% - 35px);
+
+    border:0;
+
+    background:#fff;
+}
+
+.project-info{
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    gap:20px;
+
+    padding:21px;
+}
+
+.project-info h3{
+    font-family:Manrope;
+    font-size:21px;
+}
+
+.project-info p{
+    max-width:480px;
+
+    margin-top:7px;
+
+    color:var(--muted);
+
+    font-size:11px;
+    line-height:1.55;
+}
+
+.project-link{
+    flex-shrink:0;
+
+    padding:10px 13px;
+
+    border:1px solid var(--line);
+    border-radius:999px;
+
+    font-size:10px;
+    font-weight:800;
+}
+
+/* =========================
+   FEEDBACK
+========================= */
+
+.feedback-section{
+    padding-top:0;
+}
+
+.feedback-box{
+    margin-top:50px;
+
+    padding:10px;
+
+    border:1px solid var(--line);
+    border-radius:26px;
+
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.05),
+        rgba(255,255,255,.015)
+    );
+}
+
+.feedback-image-wrap{
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:18px;
+
+    background:#111;
+}
+
+.feedback-image{
+    display:block;
+
+    width:100%;
+    height:auto;
+
+    cursor:zoom-in;
+}
+
+.feedback-hint{
+    position:absolute;
+
+    right:15px;
+    bottom:15px;
+
+    padding:9px 12px;
+
+    border-radius:999px;
+
+    background:rgba(0,0,0,.75);
+
+    font-size:9px;
+}
+
+/* MODAL */
+
+.feedback-modal{
+    position:fixed;
+    z-index:200;
+
+    inset:0;
+
+    display:none;
+    align-items:center;
+    justify-content:center;
+
+    padding:20px;
+
+    background:rgba(0,0,0,.94);
+}
+
+.feedback-modal.active{
+    display:flex;
+}
+
+.feedback-modal img{
+    max-width:95vw;
+    max-height:90vh;
+
+    object-fit:contain;
+
+    border-radius:12px;
+}
+
+.close-feedback{
+    position:absolute;
+
+    top:18px;
+    right:18px;
+
+    width:42px;
+    height:42px;
+
+    border:1px solid var(--line);
+    border-radius:50%;
+
+    background:#111;
+    color:#fff;
+
+    font-size:25px;
+
+    cursor:pointer;
+}
+
+/* =========================
+   ORÇAMENTO
+========================= */
+
+.quote{
+    width:100%;
+
+    padding:125px 20px;
+
+    background:#0a0a0a;
+
+    border-block:1px solid var(--line);
+}
+
+.quote-inner{
+    width:min(var(--max),100%);
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:.85fr 1.15fr;
+    gap:70px;
+}
+
+.quote-title h2{
+    margin:14px 0;
+
+    font-family:Manrope;
+    font-size:clamp(38px,5vw,62px);
+    line-height:1;
+    letter-spacing:-.055em;
+}
+
+.quote-title h2 span{
+    color:rgba(255,255,255,.38);
+}
+
+.quote-title p{
+    max-width:500px;
+
+    color:var(--muted);
+
+    font-size:13px;
+    line-height:1.8;
+}
+
+.benefits{
+    display:grid;
+    gap:11px;
+
+    margin-top:27px;
+
+    color:var(--muted);
+
+    font-size:11px;
+}
+
+.benefits span{
+    margin-right:7px;
+    color:#fff;
+}
+
+.form-box{
+    padding:30px;
+
+    border:1px solid var(--line);
+    border-radius:24px;
+
+    background:#101010;
+}
+
+.form-title{
+    margin-bottom:25px;
+}
+
+.form-title strong{
+    display:block;
+
+    font-family:Manrope;
+    font-size:18px;
+}
+
+.form-title small{
+    display:block;
+    margin-top:5px;
+
+    color:var(--muted);
+    font-size:9px;
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+
+    margin-bottom:13px;
+}
+
+.form-box label{
+    display:grid;
+    gap:7px;
+
+    color:var(--muted);
+
+    font-size:9px;
+    font-weight:800;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+}
+
+input,
+textarea,
+select{
+    width:100%;
+
+    padding:13px;
+
+    border:1px solid var(--line);
+    border-radius:12px;
+
+    outline:none;
+
+    background:#080808;
+    color:#fff;
+
+    font-size:12px;
+
+    text-transform:none;
+    letter-spacing:0;
+}
+
+textarea{
+    min-height:120px;
+    resize:vertical;
+}
+
+.textarea-label{
+    margin-top:13px;
+}
+
+.submit{
+    width:100%;
+    margin-top:15px;
+
+    cursor:pointer;
+}
+
+.form-note{
+    display:block;
+    margin-top:9px;
+
+    color:var(--muted);
+
+    font-size:8px;
+}
+
+/* =========================
+   PROCESS
+========================= */
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
+    gap:12px;
+
+    margin-top:55px;
+}
+
+.process-card{
+    padding:22px;
+
+    border:1px solid var(--line);
+    border-radius:20px;
+
+    background:rgba(255,255,255,.025);
+}
+
+.process-card small{
+    color:var(--muted);
+    font-size:9px;
+}
+
+.process-icon{
+    margin:30px 0 20px;
+
+    font-size:23px;
+}
+
+.process-card h3{
+    font-family:Manrope;
+    font-size:17px;
+}
+
+.process-card p{
+    margin-top:7px;
+
+    color:var(--muted);
+
+    font-size:10px;
+    line-height:1.55;
+}
+
+/* =========================
+   UPSELL
+========================= */
+
+.upsell{
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:50px;
+
+    padding:35px;
+
+    border:1px solid var(--line);
+    border-radius:25px;
+
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.04),
+        transparent
+    );
+}
+
+.upsell h2{
+    margin-top:12px;
+
+    font-family:Manrope;
+    font-size:42px;
+    line-height:1;
+}
+
+.upsell h2 span{
+    color:var(--muted);
+}
+
+.upsell-text p{
+    color:var(--muted);
+
+    font-size:12px;
+    line-height:1.7;
+}
+
+.upsell-options{
+    display:grid;
+    gap:10px;
+
+    margin:25px 0;
+}
+
+.upsell-option{
+    padding:15px;
+
+    border:1px solid var(--line);
+    border-radius:14px;
+}
+
+.upsell-option strong{
+    display:block;
+    font-size:10px;
+}
+
+.upsell-option span{
+    display:block;
+    margin-top:5px;
+
+    color:var(--muted);
+
+    font-size:9px;
+}
+
+/* =========================
+   FAQ
+========================= */
+
+.faq{
+    margin-top:50px;
+
+    border-top:1px solid var(--line);
+}
+
+details{
+    padding:20px 0;
+
+    border-bottom:1px solid var(--line);
+}
+
+summary{
+    display:flex;
+    justify-content:space-between;
+
+    cursor:pointer;
+
+    list-style:none;
+
+    font-family:Manrope;
+    font-size:15px;
+    font-weight:700;
+}
+
+summary::-webkit-details-marker{
+    display:none;
+}
+
+summary span{
+    color:var(--muted);
+}
+
+details p{
+    max-width:800px;
+
+    padding-top:13px;
+
+    color:var(--muted);
+
+    font-size:11px;
+    line-height:1.7;
+}
+
+/* =========================
+   FINAL CTA
+========================= */
+
+.final{
+    position:relative;
+    overflow:hidden;
+
+    padding:150px 20px;
+
+    text-align:center;
+
+    border-top:1px solid var(--line);
+}
+
+.final h2{
+    margin:15px 0;
+
+    font-family:Manrope;
+    font-size:clamp(42px,6vw,75px);
+    line-height:.97;
+    letter-spacing:-.06em;
+}
+
+.final h2 span{
+    color:rgba(255,255,255,.38);
+}
+
+.final p{
+    margin-bottom:25px;
+
+    color:var(--muted);
+
+    font-size:12px;
+}
+
+.orbit{
+    position:absolute;
+
+    width:600px;
+    height:300px;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    border:1px solid rgba(255,255,255,.06);
+    border-radius:50%;
+
+    pointer-events:none;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+    width:min(var(--max),calc(100% - 40px));
+    margin:auto;
+
+    padding:28px 0 40px;
+
+    display:flex;
+    justify-content:space-between;
+
+    border-top:1px solid var(--line);
+
+    color:var(--muted);
+
+    font-size:9px;
+}
+
+.footer-logo{
+    color:#fff;
+
+    font-family:Manrope;
+    font-size:20px;
+    font-weight:800;
+    letter-spacing:-.06em;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+    .nav{
+        display:none;
+
+        position:absolute;
+
+        top:60px;
+        left:0;
+        right:0;
+
+        flex-direction:column;
+        gap:18px;
+
+        padding:20px;
+
+        border:1px solid var(--line);
+        border-radius:16px;
+
+        background:#101010;
+    }
+
+    .nav.open{
+        display:flex;
+    }
+
+    .menu{
+        display:block;
+    }
+
+    .header-btn{
+        display:none;
+    }
+
+    .hero{
+        grid-template-columns:1fr;
+        padding-top:125px;
+    }
+
+    .hero-visual{
+        max-width:650px;
+        width:100%;
+        margin:auto;
+    }
+
+    .service-grid,
+    .quote-inner{
+        grid-template-columns:1fr;
+        gap:45px;
+    }
+
+    .package-card{
+        grid-template-columns:1fr;
+    }
+
+    .package-main{
+        border-right:0;
+        border-bottom:1px solid var(--line);
+    }
+
+    .projects-grid{
+        grid-template-columns:1fr;
+    }
+
+    .process-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .upsell{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    .section,
+    .hero{
+        width:calc(100% - 28px);
+    }
+
+    .hero{
+        padding-top:115px;
+    }
+
+    .hero h1{
+        font-size:47px;
+    }
+
+    .visual-screen{
+        min-height:370px;
+    }
+
+    .visual-logo{
+        font-size:57px;
+    }
+
+    .floating-card{
+        transform:scale(.82);
+    }
+
+    .section{
+        padding:90px 0;
+    }
+
+    .service-big{
+        font-size:23px;
+    }
+
+    .package-main,
+    .package-list{
+        padding:25px 20px;
+    }
+
+    .project-preview{
+        height:380px;
+    }
+
+    .project-info{
+        display:block;
+    }
+
+    .project-link{
+        display:inline-flex;
+        margin-top:14px;
+    }
+
+    .feedback-box{
+        padding:7px;
+    }
+
+    .quote{
+        padding:90px 14px;
+    }
+
+    .form-row{
+        grid-template-columns:1fr;
+    }
+
+    .form-box{
+        padding:20px;
+    }
+
+    .process-grid{
+        grid-template-columns:1fr;
+    }
+
+    .upsell{
+        padding:25px;
+    }
+
+    .footer{
+        display:grid;
+        gap:12px;
+    }
+
+    .footer-right{
+        display:none;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="header">
+
+    <a href="#inicio" class="logo">
+        KOVA
+    </a>
+
+      <nav class="nav" id="nav">
+
+        <a href="#servico">Serviço</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#feedbacks">Feedbacks</a>
+        <a href="#processo">Processo</a>
+        <a href="#faq">FAQ</a>
+
+    </nav>
+
+    <a href="#orcamento" class="header-btn">
+        Começar ↗
+    </a>
+
+    <button class="menu" id="menu">
+        ☰
+    </button>
+
+</header>
+
+
+<main id="inicio">
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div>
+
+        <div class="eyebrow">
+            <span class="dot"></span>
+            SITES & PRESENÇA DIGITAL
+        </div>
+
+        <h1>
+            Seu negócio merece uma presença digital
+            <span>à altura.</span>
+        </h1>
+
+        <p class="hero-text">
+            A KOVA cria sites profissionais, modernos e pensados
+            para transformar sua presença online em uma experiência
+            que transmite confiança.
+        </p>
+
+        <div class="buttons">
+
+            <a href="#orcamento" class="btn btn-white">
+                Quero meu site ↗
+            </a>
+
+            <a href="#projetos" class="btn btn-dark">
+                Ver projetos ↓
+            </a>
+
+        </div>
+
+        <div class="hero-proof">
+            Design premium · Responsivo · Feito sob medida
+        </div>
+
+    </div>
+
+
+    <div class="hero-visual">
+
+        <div class="visual">
+
+            <div class="visual-top">
+
+                <span class="window"></span>
+                <span class="window"></span>
+                <span class="window"></span>
+
+                KOVA / DIGITAL EXPERIENCE
+
+            </div>
+
+            <div class="visual-screen">
+
+                <div class="visual-logo">
+                    KOVA
+                </div>
+
+                <div class="floating-card card-a">
+                    <small>01</small>
+                    <strong>Presença</strong>
+                    <span>que posiciona.</span>
+                </div>
+
+                <div class="floating-card card-b">
+                    <small>02</small>
+                    <strong>Design</strong>
+                    <span>que comunica.</span>
+                </div>
+
+                <div class="scan"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MARQUEE
+========================= -->
+
+<section class="marquee">
+
+    <div class="marquee-track">
+
+        SITES PROFISSIONAIS ✦ DESIGN ESTRATÉGICO ✦
+        PRESENÇA DIGITAL ✦ SITES PROFISSIONAIS ✦
+        DESIGN ESTRATÉGICO ✦ PRESENÇA DIGITAL ✦
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SERVIÇO
+========================= -->
+
+<section class="section" id="servico">
+
+    <div class="heading">
+
+        <div class="kicker">
+            01 / O SERVIÇO
+        </div>
+
+        <h2>
+            Um site que faz seu negócio
+            <span>parecer profissional.</span>
+        </h2>
+
+        <p>
+            Você cuida do negócio.
+            A KOVA cuida da experiência digital.
+        </p>
+
+    </div>
+
+
+    <div class="service-grid">
+
+        <div>
+
+            <p class="service-big">
+                Não é só colocar seu negócio na internet.
+                É construir uma presença que passe confiança
+                antes mesmo do primeiro contato.
+            </p>
+
+            <a href="#orcamento" class="text-link">
+                Quero começar ↗
+            </a>
+
+        </div>
+
+
+        <div class="features">
+
+            <article class="feature">
+
+                <span class="feature-number">01</span>
+
+                <div>
+
+                    <h3>
+                        Design personalizado
+                    </h3>
+
+                    <p>
+                        Visual moderno alinhado à identidade
+                        e ao posicionamento do seu negócio.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="feature">
+
+                <span class="feature-number">02</span>
+
+                <div>
+
+                    <h3>
+                        100% responsivo
+                    </h3>
+
+                    <p>
+                        Experiência pensada para celular,
+                        tablet e computador.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="feature">
+
+                <span class="feature-number">03</span>
+
+                <div>
+
+                    <h3>
+                        Conversão em foco
+                    </h3>
+
+                    <p>
+                        Botões e seções organizados
+                        para facilitar o contato.
+                    </p>
+
+                </div>
+
+            </article>
+
+
+            <article class="feature">
+
+                <span class="feature-number">04</span>
+
+                <div>
+
+                    <h3>
+                        Publicação
+                    </h3>
+
+                    <p>
+                        Projeto preparado para sair
+                        do desenvolvimento e ir para o ar.
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+  <!-- =========================
+     PACOTE
+========================= -->
+
+<section class="section" id="comprar">
+
+    <div class="heading">
+
+        <div class="kicker">
+            02 / PACOTE ESSENCIAL
+        </div>
+
+        <h2>
+            Seu próximo site começa
+            <span>aqui.</span>
+        </h2>
+
+        <p>
+            Uma solução profissional para colocar
+            seu negócio no digital com uma apresentação
+            moderna e estratégica.
+        </p>
+
+    </div>
+
+
+    <div class="package-card">
+
+        <div class="package-main">
+
+            <span class="package-label">
+                SITE ESSENCIAL
+            </span>
+
+            <h3>
+                Presença digital profissional,
+                sem complicação.
+            </h3>
+
+            <p>
+                Um pacote pensado para negócios que precisam
+                de um site moderno para apresentar serviços,
+                gerar confiança e facilitar novos contatos.
+            </p>
+
+            <div class="price">
+
+                <small>A partir de</small>
+
+                <strong>R$450</strong>
+
+                <small>
+                    pagamento único*
+                </small>
+
+            </div>
+
+            <a
+                href="https://pay.kiwify.com.br/kYKpDOh"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-white full"
+            >
+                Comprar agora ↗
+            </a>
+
+        </div>
+
+
+        <div class="package-list">
+
+            <div class="included-title">
+                O QUE ESTÁ INCLUSO
+            </div>
+
+            <div class="included">
+                <span>✓</span>
+                Site profissional personalizado
+            </div>
+
+            <div class="included">
+                <span>✓</span>
+                Design responsivo
+            </div>
+
+            <div class="included">
+                <span>✓</span>
+                Seções estratégicas
+            </div>
+
+            <div class="included">
+                <span>✓</span>
+                Botões de contato / WhatsApp
+            </div>
+
+            <div class="included">
+                <span>✓</span>
+                Animações e microinterações
+            </div>
+
+            <div class="included">
+                <span>✓</span>
+                Publicação do projeto
+            </div>
+
+            <div class="included">
+                <span>+</span>
+                Domínio e hospedagem conforme contratação
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROJETOS
+========================= -->
+
+<section class="section" id="projetos">
+
+    <div class="heading">
+
+        <div class="kicker">
+            03 / PROJETOS REALIZADOS
+        </div>
+
+        <h2>
+            Sites que a KOVA
+            <span>já criou.</span>
+        </h2>
+
+        <p>
+            Conheça algumas demonstrações de projetos
+            desenvolvidos pela KOVA.
+        </p>
+
+    </div>
+
+
+    <div class="projects-grid">
+
+
+        <!-- =====================
+             PROJETO 01
+        ====================== -->
+
+        <article class="project">
+
+            <div class="project-top">
+
+                <div>
+                    <span>01</span>
+                    <span>FOTOGRAFIA / PORTFÓLIO</span>
+                </div>
+
+                <span class="project-status">
+                    ONLINE ↗
+                </span>
+
+            </div>
+
+
+            <div class="project-preview">
+
+                <div class="browser">
+
+                    <span class="browser-dot"></span>
+                    <span class="browser-dot"></span>
+                    <span class="browser-dot"></span>
+
+                    <span class="browser-url">
+                        mayrartfotos.com.br
+                    </span>
+
+                </div>
+
+
+                <iframe
+                    src="https://mayrartfotos.com.br"
+                    loading="lazy"
+                    title="Demonstração do site MAY ARTFOTOS"
+                ></iframe>
+
+            </div>
+
+
+            <div class="project-info">
+
+                <div>
+
+                    <h3>
+                        MAY ARTFOTOS
+                    </h3>
+
+                    <p>
+                        Site de fotografia com foco em
+                        portfólio, sessões e apresentação
+                        visual dos trabalhos.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="https://mayrartfotos.com.br"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                >
+                    Ver projeto ↗
+                </a>
+
+            </div>
+
+        </article>
+
+
+        <!-- =====================
+             PROJETO 02
+        ====================== -->
+
+        <article class="project">
+
+            <div class="project-top">
+
+                <div>
+                    <span>02</span>
+                    <span>FITNESS / DIGITAL</span>
+                </div>
+
+                <span class="project-status">
+                    ONLINE ↗
+                </span>
+
+            </div>
+
+
+            <div class="project-preview">
+
+                <div class="browser">
+
+                    <span class="browser-dot"></span>
+                    <span class="browser-dot"></span>
+                    <span class="browser-dot"></span>
+
+                    <span class="browser-url">
+                        glowbr.vercel.app
+                    </span>
+
+                </div>
+
+
+                <iframe
+                    src="https://glowbr.vercel.app/"
+                    loading="lazy"
+                    title="Demonstração do site RISE METHOD"
+                ></iframe>
+
+            </div>
+
+
+            <div class="project-info">
+
+                <div>
+
+                    <h3>
+                        RISE METHOD
+                    </h3>
+
+                    <p>
+                        Projeto digital com apresentação
+                        moderna, experiência responsiva
+                        e foco em conversão.
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="https://glowbr.vercel.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                >
+                    Ver projeto ↗
+                </a>
+
+            </div>
+
+        </article>
+
+    </div>
+
+</section>
+  <!-- =========================
+     FEEDBACKS
+========================= -->
+
+<section class="section feedback-section" id="feedbacks">
+
+    <div class="heading">
+
+        <div class="kicker">
+            04 / FEEDBACKS & DEPOIMENTOS
+        </div>
+
+        <h2>
+            O reconhecimento de quem
+            <span>já trabalhou comigo.</span>
+        </h2>
+
+        <p>
+            Cada projeto representa confiança, dedicação
+            e a busca por entregar sempre um resultado profissional.
+        </p>
+
+    </div>
+
+
+    <div class="feedback-box">
+
+        <div class="feedback-image-wrap">
+
+            <img
+                src="244915.png"
+                alt="Feedbacks e depoimentos dos projetos da KOVA"
+                class="feedback-image"
+                id="feedbackImage"
+            >
+
+            <div class="feedback-hint">
+                ⌕ Clique para ampliar
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ORÇAMENTO
+========================= -->
+
+<section class="quote" id="orcamento">
+
+    <div class="quote-inner">
+
+        <div class="quote-title">
+
+            <div class="kicker">
+                05 / PROJETO PERSONALIZADO
+            </div>
+
+            <h2>
+                Seu projeto é
+                <span>diferente?</span>
+            </h2>
+
+            <p>
+                Se você precisa de funcionalidades específicas
+                ou de uma solução totalmente personalizada,
+                conte para a KOVA.
+            </p>
+
+
+            <div class="benefits">
+
+                <div>
+                    <span>✦</span>
+                    Sites personalizados
+                </div>
+
+                <div>
+                    <span>✦</span>
+                    Funcionalidades sob medida
+                </div>
+
+                <div>
+                    <span>✦</span>
+                    Orçamento de acordo com o projeto
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="form-box">
+
+            <div class="form-title">
+
+                <strong>
+                    ORÇAMENTO KOVA
+                </strong>
+
+                <small>
+                    Conte um pouco sobre seu projeto.
+                </small>
+
+            </div>
+
+
+            <form id="quoteForm">
+
+                <div class="form-row">
+
+                    <label>
+
+                        Seu nome *
+
+                        <input
+                            type="text"
+                            name="nome"
+                            placeholder="Digite seu nome"
+                            required
+                        >
+
+                    </label>
+
+
+                    <label>
+
+                        Empresa / negócio
+
+                        <input
+                            type="text"
+                            name="empresa"
+                            placeholder="Nome da empresa"
+                        >
+
+                    </label>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <label>
+
+                        WhatsApp *
+
+                        <input
+                            type="text"
+                            name="whatsapp"
+                            placeholder="(00) 00000-0000"
+                            required
+                        >
+
+                    </label>
+
+
+                    <label>
+
+                        Instagram / site
+
+                        <input
+                            type="text"
+                            name="instagram"
+                            placeholder="@seunegocio"
+                        >
+
+                    </label>
+
+                </div>
+
+
+                <div class="form-row">
+
+                    <label>
+
+                        Tipo de projeto *
+
+                        <select name="tipo" required>
+
+                            <option value="">
+                                Selecione
+                            </option>
+
+                            <option>
+                                Site institucional
+                            </option>
+
+                            <option>
+                                Landing Page
+                            </option>
+
+                            <option>
+                                Portfólio
+                            </option>
+
+                            <option>
+                                Loja virtual
+                            </option>
+
+                            <option>
+                                Sistema / plataforma
+                            </option>
+
+                            <option>
+                                Outro
+                            </option>
+
+                        </select>
+
+                    </label>
+
+
+                    <label>
+
+                        Faixa de investimento
+
+                        <select name="orcamento">
+
+                            <option value="">
+                                Selecione
+                            </option>
+
+                            <option>
+                                Até R$ 500
+                            </option>
+
+                            <option>
+                                R$ 500 – R$ 1.000
+                            </option>
+
+                            <option>
+                                R$ 1.000 – R$ 2.500
+                            </option>
+
+                            <option>
+                                R$ 2.500+
+                            </option>
+
+                            <option>
+                                Ainda não sei
+                            </option>
+
+                        </select>
+
+                    </label>
+
+                </div>
+
+
+                <label class="textarea-label">
+
+                    Conte sobre seu projeto *
+
+                    <textarea
+                        name="projeto"
+                        placeholder="O que você precisa? Quais funcionalidades gostaria de ter?"
+                        required
+                    ></textarea>
+
+                </label>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-white submit"
+                >
+                    Solicitar orçamento ↗
+                </button>
+
+
+                <small class="form-note">
+                    Você será direcionado para o WhatsApp da KOVA.
+                </small>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+  <!-- =========================
+     PROCESSO
+========================= -->
+
+<section class="section" id="processo">
+
+    <div class="heading">
+
+        <div class="kicker">
+            06 / PROCESSO
+        </div>
+
+        <h2>
+            Do pagamento ao site
+            <span>no ar.</span>
+        </h2>
+
+        <p>
+            Um processo simples, organizado e transparente.
+        </p>
+
+    </div>
+
+
+    <div class="process-grid">
+
+        <article class="process-card">
+
+            <small>01</small>
+
+            <div class="process-icon">
+                ↗
+            </div>
+
+            <h3>
+                Você compra
+            </h3>
+
+            <p>
+                Pagamento realizado pelo checkout.
+            </p>
+
+        </article>
+
+
+        <article class="process-card">
+
+            <small>02</small>
+
+            <div class="process-icon">
+                ✦
+            </div>
+
+            <h3>
+                Você envia
+            </h3>
+
+            <p>
+                Informações, referências e materiais.
+            </p>
+
+        </article>
+
+
+        <article class="process-card">
+
+            <small>03</small>
+
+            <div class="process-icon">
+                ⌘
+            </div>
+
+            <h3>
+                A KOVA cria
+            </h3>
+
+            <p>
+                Seu site entra em produção.
+            </p>
+
+        </article>
+
+
+        <article class="process-card">
+
+            <small>04</small>
+
+            <div class="process-icon">
+                ✓
+            </div>
+
+            <h3>
+                Você aprova
+            </h3>
+
+            <p>
+                Após os ajustes, o projeto é preparado.
+            </p>
+
+        </article>
+
+
+        <article class="process-card">
+
+            <small>05</small>
+
+            <div class="process-icon">
+                ◉
+            </div>
+
+            <h3>
+                Site no ar
+            </h3>
+
+            <p>
+                Sua presença digital fica pronta.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     KOVA CARE
+========================= -->
+
+<section class="section">
+
+    <div class="upsell">
+
+        <div>
+
+            <div class="kicker">
+                APÓS A COMPRA / KOVA CARE
+            </div>
+
+            <h2>
+                Seu site pronto.
+                <span>E agora?</span>
+            </h2>
+
+        </div>
+
+
+        <div class="upsell-text">
+
+            <p>
+                Depois da compra, você pode contratar
+                serviços adicionais da KOVA para manter
+                seu site atualizado e acompanhado.
+            </p>
+
+
+            <div class="upsell-options">
+
+                <div class="upsell-option">
+
+                    <strong>
+                        MANUTENÇÃO + SUPORTE
+                    </strong>
+
+                    <span>
+                        Alterações, atualizações e atendimento.
+                    </span>
+
+                </div>
+
+
+                <div class="upsell-option">
+
+                    <strong>
+                        MANUTENÇÃO + SUPORTE + HOSPEDAGEM
+                    </strong>
+
+                    <span>
+                        Uma solução recorrente para deixar
+                        a parte técnica com a KOVA.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FAQ
+========================= -->
+
+<section class="section" id="faq">
+
+    <div class="heading">
+
+        <div class="kicker">
+            07 / DÚVIDAS
+        </div>
+
+        <h2>
+            Perguntas
+            <span>frequentes.</span>
+        </h2>
+
+    </div>
+
+
+    <div class="faq">
+
+
+        <details>
+
+            <summary>
+                Quanto tempo leva para criar o site?
+                <span>+</span>
+            </summary>
+
+            <p>
+                O prazo varia de acordo com o projeto e
+                com a velocidade do envio dos materiais.
+                O prazo final é alinhado no início do atendimento.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                O site funciona no celular?
+                <span>+</span>
+            </summary>
+
+            <p>
+                Sim. O projeto é desenvolvido de forma
+                responsiva para diferentes tamanhos de tela.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                Posso contratar manutenção depois?
+                <span>+</span>
+            </summary>
+
+            <p>
+                Sim. A KOVA pode oferecer manutenção
+                e suporte após a entrega.
+            </p>
+
+        </details>
+
+
+        <details>
+
+            <summary>
+                Como envio as informações do meu negócio?
+                <span>+</span>
+            </summary>
+
+            <p>
+                O briefing pode ser organizado por formulário
+                ou diretamente pelo WhatsApp.
+            </p>
+
+        </details>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CTA FINAL
+========================= -->
+
+<section class="final">
+
+    <div class="orbit"></div>
+
+    <div class="kicker">
+        KOVA / START NOW
+    </div>
+
+    <h2>
+        Pronto para colocar
+        <span>seu negócio no digital?</span>
+    </h2>
+
+    <p>
+        Comece com um site profissional e deixe
+        a KOVA cuidar da experiência.
+    </p>
+
+    <a
+        href="#orcamento"
+        class="btn btn-white"
+    >
+        Quero meu site ↗
+    </a>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="footer">
+
+    <div class="footer-logo">
+        KOVA
+    </div>
+
+    <div>
+        © 2026 KOVA. Sites & Presença Digital.
+    </div>
+
+    <div class="footer-right">
+        DESIGN / DEVELOPMENT / DIGITAL
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     MODAL DOS FEEDBACKS
+========================= -->
+
+<div
+    class="feedback-modal"
+    id="feedbackModal"
+>
+
+    <button
+        class="close-feedback"
+        id="closeFeedback"
+        aria-label="Fechar"
+    >
+        ×
+    </button>
+
+    <img
+        src="244915.png"
+        alt="Feedback KOVA ampliado"
+    >
+
+</div>
+  <script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    /* =========================
+       MENU MOBILE
+    ========================= */
+
+    const menu = document.getElementById("menu");
+    const nav = document.getElementById("nav");
+
+    if (menu && nav) {
+
+        menu.addEventListener("click", () => {
+            nav.classList.toggle("active");
+            menu.classList.toggle("active");
+        });
+
+
+        nav.querySelectorAll("a").forEach(link => {
+
+            link.addEventListener("click", () => {
+                nav.classList.remove("active");
+                menu.classList.remove("active");
+            });
+
+        });
+
+    }
+
+
+    /* =========================
+       FEEDBACK / MODAL
+    ========================= */
+
+    const feedbackImage = document.getElementById("feedbackImage");
+    const feedbackModal = document.getElementById("feedbackModal");
+    const closeFeedback = document.getElementById("closeFeedback");
+
+    if (feedbackImage && feedbackModal) {
+
+        feedbackImage.addEventListener("click", () => {
+
+            feedbackModal.classList.add("active");
+
+            document.body.classList.add("no-scroll");
+
+        });
+
+    }
+
+
+    if (closeFeedback && feedbackModal) {
+
+        closeFeedback.addEventListener("click", () => {
+
+            feedbackModal.classList.remove("active");
+
+            document.body.classList.remove("no-scroll");
+
+        });
+
+    }
+
+
+    if (feedbackModal) {
+
+        feedbackModal.addEventListener("click", (event) => {
+
+            if (event.target === feedbackModal) {
+
+                feedbackModal.classList.remove("active");
+
+                document.body.classList.remove("no-scroll");
+
+            }
+
+        });
+
+    }
+
+
+    /* =========================
+       ESC FECHA MODAL
+    ========================= */
+
+    document.addEventListener("keydown", (event) => {
+
+        if (event.key === "Escape" && feedbackModal) {
+
+            feedbackModal.classList.remove("active");
+
+            document.body.classList.remove("no-scroll");
+
+        }
+
+    });
+
+
+    /* =========================
+       FORMULÁRIO → WHATSAPP
+    ========================= */
+
+    const quoteForm = document.getElementById("quoteForm");
+
+    if (quoteForm) {
+
+        quoteForm.addEventListener("submit", (event) => {
+
+            event.preventDefault();
+
+
+            const formData = new FormData(quoteForm);
+
+
+            const nome = formData.get("nome") || "";
+            const empresa = formData.get("empresa") || "";
+            const whatsapp = formData.get("whatsapp") || "";
+            const instagram = formData.get("instagram") || "";
+            const tipo = formData.get("tipo") || "";
+            const orcamento = formData.get("orcamento") || "";
+            const projeto = formData.get("projeto") || "";
+
+
+            const mensagem =
+`Olá, KOVA! Quero solicitar um orçamento.
+
+*Nome:* ${nome}
+*Empresa/Negócio:* ${empresa}
+*WhatsApp:* ${whatsapp}
+*Instagram/Site:* ${instagram}
+*Tipo de projeto:* ${tipo}
+*Faixa de investimento:* ${orcamento}
+
+*Sobre o projeto:*
+${projeto}`;
+
+
+            const numero = "55629949471160";
+
+            const url =
+                "https://wa.me/" +
+                numero +
+                "?text=" +
+                encodeURIComponent(mensagem);
+
+
+            window.open(url, "_blank");
+
+        });
+
+    }
+
+
+    /* =========================
+       ANIMAÇÃO DE APARECER
+    ========================= */
+
+    const revealElements =
+        document.querySelectorAll(
+            ".heading, .service-card, .package-card, .project, .process-card, .upsell, details"
+        );
+
+
+    if ("IntersectionObserver" in window) {
+
+        const observer =
+            new IntersectionObserver(
+                (entries) => {
+
+                    entries.forEach(entry => {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add("visible");
+
+                            observer.unobserve(entry.target);
+
+                        }
+
+                    });
+
+                },
+                {
+                    threshold: 0.08
+                }
+            );
+
+
+        revealElements.forEach(element => {
+
+            element.classList.add("reveal");
+
+            observer.observe(element);
+
+        });
+
+    }
+
+
+    /* =========================
+       FEEDBACK HINT
+    ========================= */
+
+    if (feedbackImage) {
+
+        setTimeout(() => {
+
+            const hint =
+                document.querySelector(".feedback-hint");
+
+            if (hint) {
+
+                hint.classList.add("hide");
+
+            }
+
+        }, 5000);
+
+    }
+
+});
+
+
+/* =========================
+   ANIMAÇÃO SUAVE DOS LINKS
+========================= */
+
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+
+    link.addEventListener("click", function(event) {
+
+        const target =
+            document.querySelector(this.getAttribute("href"));
+
+        if (target) {
+
+            event.preventDefault();
+
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
